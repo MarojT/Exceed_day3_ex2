@@ -9,12 +9,11 @@
 TaskHandle_t task_a = NULL;
 TaskHandle_t task_b = NULL;
 TaskHandle_t task_c = NULL;
-int led_delay = 0;
 
 void get_delay(void *param){
   while (1)
   {
-    led_delay = Get_Led();
+    Get_Led();
     vTaskDelay(5000/portTICK_PERIOD_MS);
   }  
 }

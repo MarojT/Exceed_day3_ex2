@@ -4,6 +4,7 @@
 const char *ssid = "Jtb";
 const char *password = "zlsq1912";
 const String baseUrl = "https://exceed-hardware-stamp465.koyeb.app/leddelay";
+extern int led_delay = 0;
 
 void Connect_Wifi(){
     WiFi.begin(ssid, password);
@@ -15,7 +16,7 @@ void Connect_Wifi(){
         Serial.print("OK! IP=");
 }
 
-int Get_Led(){
+void Get_Led(){
     DynamicJsonDocument doc(65536);
     HTTPClient http;
     http.begin(baseUrl);
@@ -27,7 +28,7 @@ int Get_Led(){
 
         Serial.println(doc["value"].as<int>());
     }
-return doc["value"].as<int>();
+led_delay = doc["value"].as<int>();
 }
 
 
