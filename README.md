@@ -2,6 +2,8 @@
 
 Exercise 2 (Medium)
 
+Board WEMOS : LOLIN D32 PRO
+
 งานนี้มีจุดประสงค์ให้เรา นำ http request มาใช้ร่วมกับ multitasking โดยเป็นการรับค่าจาก server ด้วยการ GET และนำค่านั้นไปใช้งานควบคุมการทำงานของ hardware 
 
 โดยสิ่งที่จะต้อง GET คือค่า Delay ที่เราจะเอาไปใช้ควบคุมความเร็วในการกระพริบของ Built-in LED 
